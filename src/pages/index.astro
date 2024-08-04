@@ -1,11 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import HeroAnimation from '../components/HeroAnimation.astro';
 ---
 
-<Layout title="Gonzalo Pingo Amaya - Desarrollador Full-Stack"
-		description='Desarrollador Full-Stack especializado en Java, .NET, Python y Next.js. Estudiante de Ingeniería de Sistemas en la UPC. Explora mis proyectos en GitHub y conéctate en LinkedIn.'
+<Layout title="Gonzalo PA - Desarrollador Jr Full-Stack"
+		description='Bienvenido a mi portafolio web. Soy un desarrollador Full-Stack Jr especializado en Java, .NET, Python y Next.js. Estudiante de Ingeniería de Sistemas en la UPC. Explora mis proyectos en GitHub y conéctate en LinkedIn.'
 >
-	<main class="px-4">
-		
+	<main class="flex flex-col gap-8 md:gap-24 h-full px-4">
+		<section class="container flex flex-col gap-8 items-center pt-16 m-auto">
+			<HeroAnimation/>
+		</section>	
 	</main>
 </Layout>
