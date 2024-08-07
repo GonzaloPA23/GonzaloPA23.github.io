@@ -1,5 +1,7 @@
 ---
 import Header from '../components/Header.astro';
+import '@fontsource-variable/space-grotesk'; // Supports weights 300-700
+import '@fontsource-variable/dm-sans'; // Supports weights 100-900
 
 interface Props {
 	title: string;
@@ -32,8 +34,13 @@ const { description, title } = Astro.props;
 		color-scheme: light dark;
 	}
 	html {
-		font-family: system-ui, sans-serif;
+		font-family: 'DM Sans Variable', system-ui, sans-serif;
 		scroll-behavior: smooth;
+	}
+	h1, h2, h3 {
+		font-family: 'Space Grotesk Variable', system-ui, sans-serif;
+		font-weight: 700;
+		font-size: 2.5em;
 	}
 
 	body{

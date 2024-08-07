@@ -9,7 +9,7 @@ import HeroAnimation from '../components/HeroAnimation.astro';
 	<main class="flex flex-col gap-8 md:gap-24 h-full px-4">
 		<section class="container flex flex-col gap-8 items-center pt-16 m-auto">
 			<HeroAnimation/>
-				<h1>¡Hola! Soy <span> Gonzalo PA</span></h1>	
+				<h1 class="text-balance">¡Hola! Soy <span class="text-gradient"> Gonzalo PA</span></h1>	
 				<p class="text-center text-balance"> Desarrollador Jr Full-Stack especializado en Java, .NET, Python y Next.js. Estudiante de Ingeniería de Sistemas en la UPC. Explora mis proyectos en GitHub y conéctate en LinkedIn.</p>
 				<div class="flex space-x-4">
 					<button class="button-40" role="button">
@@ -77,5 +77,29 @@ import HeroAnimation from '../components/HeroAnimation.astro';
 		  0 0 2.5em 2em var(--glow-spread-color),
 		  inset 0 0 .5em .25em var(--glow-color);
   }
+
+  .text-gradient {
+    --bg-size: 200%;
+    font-family: sans-serif;
+    background: linear-gradient(90deg, #bd11ff, #fd1d1d, #9931ec, #9a4dd0) 0 0 /
+      var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .text-gradient {
+      animation: move-bg 5s linear infinite;
+    }
+
+    @keyframes move-bg {
+      to {
+        background-position: var(--bg-size) 0;
+      }
+    }
+  }
+
+
+
   
 </style>
